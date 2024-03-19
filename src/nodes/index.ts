@@ -1,4 +1,5 @@
-import { Node, Position } from "reactflow";
+import { Node, NodeTypes, Position } from "reactflow";
+import CustomNode from "./CustomNode";
 
 export const initialNodes = [
   {
@@ -7,14 +8,15 @@ export const initialNodes = [
     position: { x: -100, y: 200 },
     sourcePosition: Position.Right,
     data: { label: "Manufacturing Process" },
-    style: {backgroundColor: 'black', color: 'white'},
+    style: { backgroundColor: "black", color: "white" },
   },
   {
     id: "research",
+    type: "customNode",
     position: { x: 100, y: 0 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#2A4494", color: "white", },
+    style: { backgroundColor: "#2A4494", color: "white" },
     data: { label: "Research" },
   },
   {
@@ -22,7 +24,7 @@ export const initialNodes = [
     position: { x: 100, y: 100 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#82B3E8", },
+    style: { backgroundColor: "#82B3E8" },
     data: { label: "Planning" },
   },
   {
@@ -30,7 +32,7 @@ export const initialNodes = [
     position: { x: 100, y: 200 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#E96343", },
+    style: { backgroundColor: "#E96343" },
     data: { label: "Designing" },
   },
   {
@@ -38,7 +40,7 @@ export const initialNodes = [
     position: { x: 100, y: 300 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#E8919D", },
+    style: { backgroundColor: "#E8919D" },
     data: { label: "Manufacturing" },
   },
   {
@@ -46,7 +48,7 @@ export const initialNodes = [
     position: { x: 100, y: 400 },
     targetPosition: Position.Left,
     sourcePosition: Position.Right,
-    style: { backgroundColor: "#A684EB", },
+    style: { backgroundColor: "#A684EB" },
     data: { label: "Sales Marketing" },
   },
   {
@@ -54,7 +56,7 @@ export const initialNodes = [
     position: { x: 300, y: -25 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#2A4494", color: "white", },
+    style: { backgroundColor: "#2A4494", color: "white" },
     data: { label: "External" },
   },
   {
@@ -62,7 +64,7 @@ export const initialNodes = [
     position: { x: 300, y: 25 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#2A4494", color: "white", },
+    style: { backgroundColor: "#2A4494", color: "white" },
     data: { label: "Internal" },
   },
   {
@@ -70,7 +72,7 @@ export const initialNodes = [
     position: { x: 300, y: 75 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#82B3E8", },
+    style: { backgroundColor: "#82B3E8" },
     data: { label: "PRD" },
   },
   {
@@ -78,7 +80,7 @@ export const initialNodes = [
     position: { x: 300, y: 125 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#82B3E8", },
+    style: { backgroundColor: "#82B3E8" },
     data: { label: "Specs" },
   },
   {
@@ -86,7 +88,7 @@ export const initialNodes = [
     position: { x: 300, y: 175 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#E96343", },
+    style: { backgroundColor: "#E96343" },
     data: { label: "Hardware" },
   },
   {
@@ -94,7 +96,7 @@ export const initialNodes = [
     position: { x: 300, y: 225 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#E96343", },
+    style: { backgroundColor: "#E96343" },
     data: { label: "Software" },
   },
   {
@@ -102,7 +104,7 @@ export const initialNodes = [
     position: { x: 300, y: 275 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#E8919D", },
+    style: { backgroundColor: "#E8919D" },
     data: { label: "Material" },
   },
   {
@@ -110,7 +112,7 @@ export const initialNodes = [
     position: { x: 300, y: 325 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#E8919D", },
+    style: { backgroundColor: "#E8919D" },
     data: { label: "Production" },
   },
   {
@@ -118,7 +120,7 @@ export const initialNodes = [
     position: { x: 300, y: 375 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#A684EB", },
+    style: { backgroundColor: "#A684EB" },
     data: { label: "Online" },
   },
   {
@@ -126,7 +128,7 @@ export const initialNodes = [
     position: { x: 300, y: 425 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#A684EB", },
+    style: { backgroundColor: "#A684EB" },
     data: { label: "Dealership" },
   },
   {
@@ -134,7 +136,7 @@ export const initialNodes = [
     position: { x: 500, y: -50 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#2A4494", color: "white", },
+    style: { backgroundColor: "#2A4494", color: "white" },
     data: { label: "B2C" },
   },
   {
@@ -142,7 +144,7 @@ export const initialNodes = [
     position: { x: 500, y: 0 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#2A4494", color: "white", },
+    style: { backgroundColor: "#2A4494", color: "white" },
     data: { label: "B2B" },
   },
   {
@@ -150,7 +152,7 @@ export const initialNodes = [
     position: { x: 700, y: -125 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#2A4494", color: "white", },
+    style: { backgroundColor: "#2A4494", color: "white" },
     data: { label: "Online" },
   },
   {
@@ -158,7 +160,7 @@ export const initialNodes = [
     position: { x: 700, y: -75 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#2A4494", color: "white", },
+    style: { backgroundColor: "#2A4494", color: "white" },
     data: { label: "Interview" },
   },
   {
@@ -166,7 +168,7 @@ export const initialNodes = [
     position: { x: 700, y: -25 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#2A4494", color: "white", },
+    style: { backgroundColor: "#2A4494", color: "white" },
     data: { label: "Public Data" },
   },
   {
@@ -174,7 +176,11 @@ export const initialNodes = [
     position: { x: 700, y: 25 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
-    style: { backgroundColor: "#2A4494", color: "white", },
+    style: { backgroundColor: "#2A4494", color: "white" },
     data: { label: "Health" },
   },
 ] satisfies Node[];
+
+export const nodeTypes = {
+  customNode: CustomNode,
+} satisfies NodeTypes;

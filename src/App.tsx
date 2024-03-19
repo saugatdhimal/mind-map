@@ -17,7 +17,7 @@ import ReactFlow, {
 
 import "reactflow/dist/style.css";
 
-import { initialNodes } from "./nodes";
+import { initialNodes, nodeTypes } from "./nodes";
 import { initialEdges, markerEndObj, styleObj } from "./edges";
 
 let id = 1;
@@ -114,6 +114,7 @@ export default function App() {
   return (
     <ReactFlow
       nodes={nodes}
+      nodeTypes={nodeTypes}
       onNodesChange={onNodesChange}
       edges={edges}
       onEdgesChange={onEdgesChange}

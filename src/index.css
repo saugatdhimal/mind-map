@@ -20,3 +20,30 @@ body,
   display: none;
 }
 
+.react-flow__node-customNode {
+  display: flex;
+  font-size: 12px;
+  border-radius: 2px;
+  width: 150px;
+  height: 40px;
+  padding: 20px;
+}
+
+.label__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: inherit;
+}
+
+.bar-chart__wrapper {
+  background-color: #EFEBE5;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0 10px;
+}
