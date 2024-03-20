@@ -1,22 +1,8 @@
 import { memo, useCallback, useState } from "react";
-import {
-  Handle,
-  NodeProps,
-  NodeToolbar,
-  Position,
-  useViewport,
-} from "reactflow";
+import { Handle, NodeProps, NodeToolbar, Position } from "reactflow";
 import BarChart from "./BarChart";
 
-
-const barChartData = [
-  { name: "Positive", value: 13451 },
-  { name: "Negative", value: 11839 },
-  { name: "Comments", value: 10463 },
-];
-
 export default memo(({ data }: NodeProps) => {
-  const { zoom } = useViewport();
   const [active, setActive] = useState(false);
 
   const onMouseEnter = useCallback(() => {
@@ -30,7 +16,7 @@ export default memo(({ data }: NodeProps) => {
   return (
     <>
       <NodeToolbar isVisible={active} position={Position.Top}>
-        <BarChart width={200 * zoom} height={100 * zoom} data={barChartData} />
+        <BarChart data={data.reviews} />
       </NodeToolbar>
       <Handle type="target" position={Position.Left} />
       <div
@@ -38,7 +24,7 @@ export default memo(({ data }: NodeProps) => {
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        {data.label}
+        <p>{data.label}</p>
       </div>
       <Handle type="source" position={Position.Right} />
     </>
