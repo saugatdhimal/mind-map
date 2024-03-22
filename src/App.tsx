@@ -15,10 +15,11 @@ import ReactFlow, {
   Edge,
 } from "reactflow";
 
-import "reactflow/dist/style.css";
-
+import Modal from "@components/Modal";
 import { initialNodes, nodeTypes } from "./nodes";
 import { initialEdges, markerEndObj, styleObj } from "./edges";
+
+import "reactflow/dist/style.css";
 
 let id = 1;
 const getId = () => `${id++}`;
@@ -103,7 +104,7 @@ export default function App() {
     []
   );
 
-  const onEdgeUpdateEnd = useCallback((_: any, edge: { id: string }) => {
+  const onEdgeUpdateEnd = useCallback((_: any, edge: Edge) => {
     if (!edgeUpdateSuccessful.current) {
       setEdges((eds) => eds.filter((e) => e.id !== edge.id));
     }
@@ -129,6 +130,7 @@ export default function App() {
       <Background />
       <MiniMap />
       <Controls />
+      <Modal />
     </ReactFlow>
   );
 }

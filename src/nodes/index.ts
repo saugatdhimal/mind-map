@@ -1,19 +1,19 @@
 import { Node, NodeTypes, Position } from "reactflow";
-import CustomNode from "./CustomNode";
+import BarChartNode from "./BarChartNode";
 
 export const initialNodes: Node[] = [
   {
     id: "mind_map",
     type: "input",
-    position: { x: -100, y: 200 },
+    position: { x: 0, y: 200 },
     sourcePosition: Position.Right,
     data: { label: "Manufacturing Process" },
     style: { backgroundColor: "black", color: "white" },
   },
   {
     id: "research",
-    position: { x: 100, y: 0 },
-    type: "customNode",
+    position: { x: 200, y: 0 },
+    type: "barChartNode",
     style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Research",
@@ -26,8 +26,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "planning",
-    position: { x: 100, y: 100 },
-    type: "customNode",
+    position: { x: 200, y: 100 },
+    type: "barChartNode",
     style: { backgroundColor: "#82B3E8" },
     data: {
       label: "Planning",
@@ -40,8 +40,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "designing",
-    position: { x: 100, y: 200 },
-    type: "customNode",
+    position: { x: 200, y: 200 },
+    type: "barChartNode",
     style: { backgroundColor: "#E96343" },
     data: {
       label: "Designing",
@@ -54,8 +54,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "manufacturing",
-    position: { x: 100, y: 300 },
-    type: "customNode",
+    position: { x: 200, y: 300 },
+    type: "barChartNode",
     style: { backgroundColor: "#E8919D" },
     data: {
       label: "Manufacturing",
@@ -68,8 +68,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "sales_marketing",
-    position: { x: 100, y: 400 },
-    type: "customNode",
+    position: { x: 200, y: 400 },
+    type: "barChartNode",
     style: { backgroundColor: "#A684EB" },
     data: {
       label: "Sales Marketing",
@@ -82,8 +82,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "external",
-    position: { x: 300, y: -25 },
-    type: "customNode",
+    position: { x: 400, y: -25 },
+    type: "barChartNode",
     style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "External",
@@ -96,8 +96,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "internal",
-    position: { x: 300, y: 25 },
-    type: "customNode",
+    position: { x: 400, y: 25 },
+    type: "barChartNode",
     style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Internal",
@@ -110,8 +110,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "prd",
-    position: { x: 300, y: 75 },
-    type: "customNode",
+    position: { x: 400, y: 75 },
+    type: "barChartNode",
     style: { backgroundColor: "#82B3E8" },
     data: {
       label: "PRD",
@@ -124,8 +124,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "specs",
-    position: { x: 300, y: 125 },
-    type: "customNode",
+    position: { x: 400, y: 125 },
+    type: "barChartNode",
     style: { backgroundColor: "#82B3E8" },
     data: {
       label: "Specs",
@@ -138,8 +138,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "hardware",
-    position: { x: 300, y: 175 },
-    type: "customNode",
+    position: { x: 400, y: 175 },
+    type: "barChartNode",
     style: { backgroundColor: "#E96343" },
     data: {
       label: "Hardware",
@@ -152,8 +152,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "software",
-    position: { x: 300, y: 225 },
-    type: "customNode",
+    position: { x: 400, y: 225 },
+    type: "barChartNode",
     style: { backgroundColor: "#E96343" },
     data: {
       label: "Software",
@@ -166,8 +166,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "material",
-    position: { x: 300, y: 275 },
-    type: "customNode",
+    position: { x: 400, y: 275 },
+    type: "barChartNode",
     style: { backgroundColor: "#E8919D" },
     data: {
       label: "Material",
@@ -180,8 +180,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "production",
-    position: { x: 300, y: 325 },
-    type: "customNode",
+    position: { x: 400, y: 325 },
+    type: "barChartNode",
     style: { backgroundColor: "#E8919D" },
     data: {
       label: "Production",
@@ -194,8 +194,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "online",
-    position: { x: 300, y: 375 },
-    type: "customNode",
+    position: { x: 400, y: 375 },
+    type: "barChartNode",
     style: { backgroundColor: "#A684EB" },
     data: {
       label: "Online",
@@ -208,8 +208,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "dealership",
-    position: { x: 300, y: 425 },
-    type: "customNode",
+    position: { x: 400, y: 425 },
+    type: "barChartNode",
     style: { backgroundColor: "#A684EB" },
     data: {
       label: "Dealership",
@@ -222,8 +222,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "b2c",
-    position: { x: 500, y: -50 },
-    type: "customNode",
+    position: { x: 600, y: -50 },
+    type: "barChartNode",
     style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "B2C",
@@ -236,8 +236,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "b2b",
-    position: { x: 500, y: 0 },
-    type: "customNode",
+    position: { x: 600, y: 0 },
+    type: "barChartNode",
     style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "B2B",
@@ -250,8 +250,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "online_2",
-    position: { x: 700, y: -125 },
-    type: "customNode",
+    position: { x: 800, y: -125 },
+    type: "barChartNode",
     style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Online",
@@ -264,8 +264,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "interview",
-    position: { x: 700, y: -75 },
-    type: "customNode",
+    position: { x: 800, y: -75 },
+    type: "barChartNode",
     style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Interview",
@@ -278,8 +278,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "public_data",
-    position: { x: 700, y: -25 },
-    type: "customNode",
+    position: { x: 800, y: -25 },
+    type: "barChartNode",
     style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Public Data",
@@ -292,8 +292,8 @@ export const initialNodes: Node[] = [
   },
   {
     id: "health",
-    position: { x: 700, y: 25 },
-    type: "customNode",
+    position: { x: 800, y: 25 },
+    type: "barChartNode",
     style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Health",
@@ -307,5 +307,5 @@ export const initialNodes: Node[] = [
 ] satisfies Node[];
 
 export const nodeTypes = {
-  customNode: CustomNode,
+  barChartNode: BarChartNode,
 } satisfies NodeTypes;
