@@ -1,19 +1,54 @@
-## Getting up and running
+# Mind Map
 
-```bash
-npm install # or `pnpm install` or `yarn install`
+## Features
+
+- **Create New Node**
+- **Delete Node**
+- **Edit Node Label**
+- **Edit Node Color**
+- **Connect Nodes**
+- **Disconnect Nodes**
+- **Change Edge Types**
+- **And Many More ...**
+
+## Demo
+
+![Mind-Map GIF](https://github.com/saugatdhimal/gifs/blob/main/mindmap.gif)
+
+## Tech Stack
+
+- [Vite](https://nextjs.org/) – Framework
+- [Typescript](https://www.typescriptlang.org/) – Language
+- [Tailwind](https://tailwindcss.com/) – CSS
+- [Vercel](https://vercel.com/) – Hosting
+- [React Flow](https://reactflow.dev/) - Library
+- [D3](https://d3js.org/) - Library
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js v20 (LTS)
+
+### 1. Clone the repository
+
+```shell
+git clone https://github.com/saugatdhimal/mind-map.git
+cd mind-map
 ```
 
-Vite is a great development server and build tool that we recommend to use. 
-You can start a development server with:
+### 2. Install npm dependencies
 
-```bash
+```shell
+npm install
+```
+
+### 3. Run the dev server
+
+```shell
 npm run dev
 ```
 
-## Resources
+### 4. Open the app in your browser
 
-Links:
-
-- [React Flow - Docs](https://reactflow.dev)
-- [React Flow - Discord](https://discord.com/invite/Bqt6xrs)
+Visit [http://localhost:5173](http://localhost:5173) in your browser.
