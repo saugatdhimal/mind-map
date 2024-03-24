@@ -4,9 +4,8 @@
     "paths": {
       "@components/*": ["./src/components/*"],
       "@edges/*": ["./src/edges/*"],
-      "@nodes/*": ["./src/edges/*"],
+      "@nodes/*": ["./src/nodes/*"],
       "@utils/*": ["./src/utils/*"],
-      "@store/*": ["./src/store/*"]
     }
   }
 }

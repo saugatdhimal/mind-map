@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useViewport } from "reactflow";
 import * as d3 from "d3";
+import cn from "@utils/cn";
 
 type BarChartProps = {
   width?: number;
@@ -104,7 +105,14 @@ const BarChart = ({ width = 200, height = 100, data }: BarChartProps) => {
 
   return (
     <div className="bg-[#EFEBE5] p-3">
-      <svg width={w} height={h}>
+      <svg
+        width={w}
+        height={h}
+        className={cn([
+          "hidden",
+          !data[0].value && !data[1].value && !data[2].value,
+        ])}
+      >
         <g
           width={boundsWidth}
           height={boundsHeight}

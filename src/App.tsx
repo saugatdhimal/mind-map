@@ -8,14 +8,12 @@ import ReactFlow, {
   useEdgesState,
   updateEdge,
   useReactFlow,
-  Position,
   OnConnect,
   OnConnectStart,
   Connection,
   Edge,
 } from "reactflow";
 
-import Modal from "@components/Modal";
 import { initialNodes, nodeTypes } from "./nodes";
 import { initialEdges, markerEndObj, styleObj } from "./edges";
 
@@ -61,23 +59,28 @@ export default function App() {
 
       if (targetIsPane) {
         const id = getId();
-        const style = nodes.find(
-          (x) => x.id == connectingNodeId.current
-        )?.style;
+        const data = nodes.find((x) => x.id == connectingNodeId.current)?.data;
         const newNode = {
           id,
           position: screenToFlowPosition({
             x: event.clientX,
             y: event.clientY,
           }),
-          sourcePosition: Position.Right,
-          targetPosition: Position.Left,
-          data: { label: `Node ${id}` },
-          style: style,
+          data: {
+            label: `Node ${id}`,
+            reviews: [
+              { name: "Positive", value: 0 },
+              { name: "Negative", value: 0 },
+              { name: "Comments", value: 0 },
+            ],
+            bgColor: data.bgColor,
+            textColor: data.textColor,
+          },
+          type: "barChartNode",
         };
 
         const newEdge = {
-          id,
+          id: `${connectingNodeId.current}->${id}`,
           source: connectingNodeId.current,
           target: id,
           style: styleObj,
@@ -130,7 +133,6 @@ export default function App() {
       <Background />
       <MiniMap />
       <Controls />
-      <Modal />
     </ReactFlow>
   );
 }

@@ -1,6 +1,7 @@
 import { Node, NodeTypes, Position } from "reactflow";
 import BarChartNode from "./BarChartNode";
 
+
 export const initialNodes: Node[] = [
   {
     id: "mind_map",
@@ -14,7 +15,6 @@ export const initialNodes: Node[] = [
     id: "research",
     position: { x: 200, y: 0 },
     type: "barChartNode",
-    style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Research",
       reviews: [
@@ -22,13 +22,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 11839 },
         { name: "Comments", value: 10463 },
       ],
+      bgColor: "#2A4494",
+      textColor: "#ffffff",
     },
   },
   {
     id: "planning",
     position: { x: 200, y: 100 },
     type: "barChartNode",
-    style: { backgroundColor: "#82B3E8" },
     data: {
       label: "Planning",
       reviews: [
@@ -36,13 +37,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 10839 },
         { name: "Comments", value: 7463 },
       ],
+      bgColor: "#82B3E8",
+      textColor: "#000000",
     },
   },
   {
     id: "designing",
     position: { x: 200, y: 200 },
     type: "barChartNode",
-    style: { backgroundColor: "#E96343" },
     data: {
       label: "Designing",
       reviews: [
@@ -50,13 +52,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 15839 },
         { name: "Comments", value: 12463 },
       ],
+      bgColor: "#E96343",
+      textColor: "#000000",
     },
   },
   {
     id: "manufacturing",
     position: { x: 200, y: 300 },
     type: "barChartNode",
-    style: { backgroundColor: "#E8919D" },
     data: {
       label: "Manufacturing",
       reviews: [
@@ -64,13 +67,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 53839 },
         { name: "Comments", value: 52463 },
       ],
+      bgColor: "#E8919D",
+      textColor: "#000000",
     },
   },
   {
     id: "sales_marketing",
     position: { x: 200, y: 400 },
     type: "barChartNode",
-    style: { backgroundColor: "#A684EB" },
     data: {
       label: "Sales Marketing",
       reviews: [
@@ -78,13 +82,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 1839 },
         { name: "Comments", value: 463 },
       ],
+      bgColor: "#A684EB",
+      textColor: "#000000",
     },
   },
   {
     id: "external",
     position: { x: 400, y: -25 },
     type: "barChartNode",
-    style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "External",
       reviews: [
@@ -92,13 +97,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 1183 },
         { name: "Comments", value: 1046 },
       ],
+      bgColor: "#2A4494",
+      textColor: "#ffffff",
     },
   },
   {
     id: "internal",
     position: { x: 400, y: 25 },
     type: "barChartNode",
-    style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Internal",
       reviews: [
@@ -106,13 +112,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 118 },
         { name: "Comments", value: 104 },
       ],
+      bgColor: "#2A4494",
+      textColor: "#ffffff",
     },
   },
   {
     id: "prd",
     position: { x: 400, y: 75 },
     type: "barChartNode",
-    style: { backgroundColor: "#82B3E8" },
     data: {
       label: "PRD",
       reviews: [
@@ -120,13 +127,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 18392 },
         { name: "Comments", value: 10631 },
       ],
+      bgColor: "#82B3E8",
+      textColor: "#000000",
     },
   },
   {
     id: "specs",
     position: { x: 400, y: 125 },
     type: "barChartNode",
-    style: { backgroundColor: "#82B3E8" },
     data: {
       label: "Specs",
       reviews: [
@@ -134,13 +142,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 11139 },
         { name: "Comments", value: 10263 },
       ],
+      bgColor: "#82B3E8",
+      textColor: "#000000",
     },
   },
   {
     id: "hardware",
     position: { x: 400, y: 175 },
     type: "barChartNode",
-    style: { backgroundColor: "#E96343" },
     data: {
       label: "Hardware",
       reviews: [
@@ -148,13 +157,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 11839 },
         { name: "Comments", value: 10463 },
       ],
+      bgColor: "#E96343",
+      textColor: "#000000",
     },
   },
   {
     id: "software",
     position: { x: 400, y: 225 },
     type: "barChartNode",
-    style: { backgroundColor: "#E96343" },
     data: {
       label: "Software",
       reviews: [
@@ -162,13 +172,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 1139 },
         { name: "Comments", value: 1043 },
       ],
+      bgColor: "#E96343",
+      textColor: "#000000",
     },
   },
   {
     id: "material",
     position: { x: 400, y: 275 },
     type: "barChartNode",
-    style: { backgroundColor: "#E8919D" },
     data: {
       label: "Material",
       reviews: [
@@ -176,13 +187,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 1839 },
         { name: "Comments", value: 1463 },
       ],
+      bgColor: "#E8919D",
+      textColor: "#000000",
     },
   },
   {
     id: "production",
     position: { x: 400, y: 325 },
     type: "barChartNode",
-    style: { backgroundColor: "#E8919D" },
     data: {
       label: "Production",
       reviews: [
@@ -190,13 +202,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 11839 },
         { name: "Comments", value: 11463 },
       ],
+      bgColor: "#E8919D",
+      textColor: "#000000",
     },
   },
   {
     id: "online",
     position: { x: 400, y: 375 },
     type: "barChartNode",
-    style: { backgroundColor: "#A684EB" },
     data: {
       label: "Online",
       reviews: [
@@ -204,13 +217,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 1139 },
         { name: "Comments", value: 1063 },
       ],
+      bgColor: "#A684EB",
+      textColor: "#000000",
     },
   },
   {
     id: "dealership",
     position: { x: 400, y: 425 },
     type: "barChartNode",
-    style: { backgroundColor: "#A684EB" },
     data: {
       label: "Dealership",
       reviews: [
@@ -218,13 +232,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 18392 },
         { name: "Comments", value: 14633 },
       ],
+      bgColor: "#A684EB",
+      textColor: "#000000",
     },
   },
   {
     id: "b2c",
     position: { x: 600, y: -50 },
     type: "barChartNode",
-    style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "B2C",
       reviews: [
@@ -232,13 +247,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 21839 },
         { name: "Comments", value: 20463 },
       ],
+      bgColor: "#2A4494",
+      textColor: "#ffffff",
     },
   },
   {
     id: "b2b",
     position: { x: 600, y: 0 },
     type: "barChartNode",
-    style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "B2B",
       reviews: [
@@ -246,13 +262,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 21839 },
         { name: "Comments", value: 12463 },
       ],
+      bgColor: "#2A4494",
+      textColor: "#ffffff",
     },
   },
   {
     id: "online_2",
     position: { x: 800, y: -125 },
     type: "barChartNode",
-    style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Online",
       reviews: [
@@ -260,13 +277,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 51839 },
         { name: "Comments", value: 40463 },
       ],
+      bgColor: "#2A4494",
+      textColor: "#ffffff",
     },
   },
   {
     id: "interview",
     position: { x: 800, y: -75 },
     type: "barChartNode",
-    style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Interview",
       reviews: [
@@ -274,13 +292,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 51839 },
         { name: "Comments", value: 50463 },
       ],
+      bgColor: "#2A4494",
+      textColor: "#ffffff",
     },
   },
   {
     id: "public_data",
     position: { x: 800, y: -25 },
     type: "barChartNode",
-    style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Public Data",
       reviews: [
@@ -288,13 +307,14 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 81839 },
         { name: "Comments", value: 80463 },
       ],
+      bgColor: "#2A4494",
+      textColor: "#ffffff",
     },
   },
   {
     id: "health",
     position: { x: 800, y: 25 },
     type: "barChartNode",
-    style: { backgroundColor: "#2A4494", color: "white" },
     data: {
       label: "Health",
       reviews: [
@@ -302,6 +322,8 @@ export const initialNodes: Node[] = [
         { name: "Negative", value: 91839 },
         { name: "Comments", value: 90463 },
       ],
+      bgColor: "#2A4494",
+      textColor: "#ffffff",
     },
   },
 ] satisfies Node[];
