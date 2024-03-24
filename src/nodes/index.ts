@@ -1,19 +1,25 @@
-import { Node, NodeTypes, Position } from "reactflow";
+import { Node, NodeTypes} from "reactflow";
 import BarChartNode from "./BarChartNode";
-
 
 export const initialNodes: Node[] = [
   {
     id: "mind_map",
-    type: "input",
+    type: "barChartNode",
     position: { x: 0, y: 200 },
-    sourcePosition: Position.Right,
-    data: { label: "Manufacturing Process" },
-    style: { backgroundColor: "black", color: "white" },
+    data: {
+      label: "Process",
+      reviews: [
+        { name: "Positive", value: 14451 },
+        { name: "Negative", value: 11839 },
+        { name: "Comments", value: 9463 },
+      ],
+      bgColor: "#00CADC",
+      textColor: "#ffffff",
+    },
   },
   {
     id: "research",
-    position: { x: 200, y: 0 },
+    position: { x: 300, y: 0 },
     type: "barChartNode",
     data: {
       label: "Research",
@@ -28,7 +34,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "planning",
-    position: { x: 200, y: 100 },
+    position: { x: 300, y: 100 },
     type: "barChartNode",
     data: {
       label: "Planning",
@@ -43,7 +49,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "designing",
-    position: { x: 200, y: 200 },
+    position: { x: 300, y: 200 },
     type: "barChartNode",
     data: {
       label: "Designing",
@@ -58,7 +64,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "manufacturing",
-    position: { x: 200, y: 300 },
+    position: { x: 300, y: 300 },
     type: "barChartNode",
     data: {
       label: "Manufacturing",
@@ -73,7 +79,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "sales_marketing",
-    position: { x: 200, y: 400 },
+    position: { x: 300, y: 400 },
     type: "barChartNode",
     data: {
       label: "Sales Marketing",
@@ -88,7 +94,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "external",
-    position: { x: 400, y: -25 },
+    position: { x: 600, y: -25 },
     type: "barChartNode",
     data: {
       label: "External",
@@ -103,7 +109,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "internal",
-    position: { x: 400, y: 25 },
+    position: { x: 600, y: 25 },
     type: "barChartNode",
     data: {
       label: "Internal",
@@ -118,7 +124,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "prd",
-    position: { x: 400, y: 75 },
+    position: { x: 600, y: 75 },
     type: "barChartNode",
     data: {
       label: "PRD",
@@ -133,7 +139,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "specs",
-    position: { x: 400, y: 125 },
+    position: { x: 600, y: 125 },
     type: "barChartNode",
     data: {
       label: "Specs",
@@ -148,7 +154,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "hardware",
-    position: { x: 400, y: 175 },
+    position: { x: 600, y: 175 },
     type: "barChartNode",
     data: {
       label: "Hardware",
@@ -163,7 +169,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "software",
-    position: { x: 400, y: 225 },
+    position: { x: 600, y: 225 },
     type: "barChartNode",
     data: {
       label: "Software",
@@ -178,7 +184,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "material",
-    position: { x: 400, y: 275 },
+    position: { x: 600, y: 275 },
     type: "barChartNode",
     data: {
       label: "Material",
@@ -193,7 +199,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "production",
-    position: { x: 400, y: 325 },
+    position: { x: 600, y: 325 },
     type: "barChartNode",
     data: {
       label: "Production",
@@ -208,7 +214,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "online",
-    position: { x: 400, y: 375 },
+    position: { x: 600, y: 375 },
     type: "barChartNode",
     data: {
       label: "Online",
@@ -223,7 +229,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "dealership",
-    position: { x: 400, y: 425 },
+    position: { x: 600, y: 425 },
     type: "barChartNode",
     data: {
       label: "Dealership",
@@ -238,7 +244,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "b2c",
-    position: { x: 600, y: -50 },
+    position: { x: 900, y: -50 },
     type: "barChartNode",
     data: {
       label: "B2C",
@@ -253,7 +259,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "b2b",
-    position: { x: 600, y: 0 },
+    position: { x: 900, y: 0 },
     type: "barChartNode",
     data: {
       label: "B2B",
@@ -268,7 +274,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "online_2",
-    position: { x: 800, y: -125 },
+    position: { x: 1200, y: -125 },
     type: "barChartNode",
     data: {
       label: "Online",
@@ -283,7 +289,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "interview",
-    position: { x: 800, y: -75 },
+    position: { x: 1200, y: -75 },
     type: "barChartNode",
     data: {
       label: "Interview",
@@ -298,7 +304,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "public_data",
-    position: { x: 800, y: -25 },
+    position: { x: 1200, y: -25 },
     type: "barChartNode",
     data: {
       label: "Public Data",
@@ -313,7 +319,7 @@ export const initialNodes: Node[] = [
   },
   {
     id: "health",
-    position: { x: 800, y: 25 },
+    position: { x: 1200, y: 25 },
     type: "barChartNode",
     data: {
       label: "Health",

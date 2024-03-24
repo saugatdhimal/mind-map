@@ -19,7 +19,7 @@ export const initialEdges = [
     target: "research",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "mind_map->planning",
@@ -27,7 +27,7 @@ export const initialEdges = [
     target: "planning",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "mind_map->designing",
@@ -35,7 +35,7 @@ export const initialEdges = [
     target: "designing",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "mind_map->manufacturing",
@@ -43,7 +43,7 @@ export const initialEdges = [
     target: "manufacturing",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "mind_map->sales_marketing",
@@ -51,7 +51,7 @@ export const initialEdges = [
     target: "sales_marketing",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "research->external",
@@ -59,7 +59,7 @@ export const initialEdges = [
     target: "external",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "research->internal",
@@ -67,7 +67,7 @@ export const initialEdges = [
     target: "internal",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "planning->prd",
@@ -75,7 +75,7 @@ export const initialEdges = [
     target: "prd",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "planning->specs",
@@ -83,7 +83,7 @@ export const initialEdges = [
     target: "specs",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "designing->hardware",
@@ -91,7 +91,7 @@ export const initialEdges = [
     target: "hardware",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "designing->software",
@@ -99,7 +99,7 @@ export const initialEdges = [
     target: "software",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "manufacturing->material",
@@ -107,7 +107,7 @@ export const initialEdges = [
     target: "material",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "manufacturing->production",
@@ -115,7 +115,7 @@ export const initialEdges = [
     target: "production",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "sales_marketing->online",
@@ -123,7 +123,7 @@ export const initialEdges = [
     target: "online",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "sales_marketing->dealership",
@@ -131,7 +131,7 @@ export const initialEdges = [
     target: "dealership",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "external->b2c",
@@ -139,7 +139,7 @@ export const initialEdges = [
     target: "b2c",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "external->b2b",
@@ -147,7 +147,7 @@ export const initialEdges = [
     target: "b2b",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "b2c->online_2",
@@ -155,7 +155,7 @@ export const initialEdges = [
     target: "online_2",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "b2c->interview",
@@ -163,7 +163,7 @@ export const initialEdges = [
     target: "interview",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "b2c->public_data",
@@ -171,7 +171,7 @@ export const initialEdges = [
     target: "public_data",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
   {
     id: "b2c->health",
@@ -179,6 +179,6 @@ export const initialEdges = [
     target: "health",
     markerEnd: markerEndObj,
     style: styleObj,
-    type: "smoothstep",
+    type: "step",
   },
 ] satisfies Edge[];

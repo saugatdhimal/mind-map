@@ -109,43 +109,38 @@ export default memo(({ id, data }: NodeProps) => {
       <Handle
         type="target"
         position={Position.Left}
-        className={cn(
-          ["bg-transparent border-0", !active || editLabel],
-          "w-2.5 h-2.5"
-        )}
+        className={cn(["opacity-0", !active || editLabel], "w-2.5 h-2.5")}
       />
       <Handle
         type="source"
         position={Position.Right}
-        className={cn(
-          ["bg-transparent border-0", !active || editLabel],
-          "w-2.5 h-2.5"
-        )}
+        className={cn(["opacity-0", !active || editLabel], "w-2.5 h-2.5")}
       />
-      <p className="text-xs" style={{ color: data.textColor }}>
+      <p className="text-md" style={{ color: data.textColor }}>
         {data.label}
       </p>
       <Input
         type="color"
-        isVisible={active && !editLabel}
+        isVisible={editLabel}
         defaultValue={data.bgColor}
         onChange={handleBgColor}
-        className="nodrag w-3 h-3 absolute top-0.5 left-0.5 bg-white rounded-sm cursor-pointer"
+        className="nodrag w-3 h-3 absolute top-0.5 right-4 bg-white rounded-sm cursor-pointer z-20"
       />
       <Input
         type="color"
-        isVisible={active && !editLabel}
+        isVisible={editLabel}
         defaultValue={data.textColor}
         onChange={handleLabelColor}
-        className="nodrag w-3 h-3 absolute top-0.5 left-4 bg-white rounded-sm cursor-pointer"
+        className="nodrag w-3 h-3 absolute top-0.5 right-8 bg-white rounded-sm cursor-pointer z-20"
       />
       <Input
         type="text"
         isVisible={editLabel}
         defaultValue={data.label}
+        maxLength={15}
         onChange={handleLabelChange}
         style={{ backgroundColor: data.bgColor, color: data.textColor }}
-        className="w-[150px] h-10 absolute inset-0 rounded-sm nodrag px-2 text-xs text-center z-10"
+        className="w-[150px] h-10 absolute inset-0 rounded-sm nodrag px-2 text-md text-center z-10"
       />
       <DeleteButton
         isVisible={active && !editLabel}
